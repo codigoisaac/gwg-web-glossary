@@ -8,18 +8,21 @@
 </head>
 
 <body>
+	<!-- Intro  -->
 	<div>
-		<b>Welcome to PHP Master Program.</b>
+		<h1>Welcome to PHP Master Program.</h1>
 		<i>This is a project made by <a href="https://campsite.bio/codigoisaac" target="_blank" noreferer>códigoisaac</a> to learn the super cool PHP programming language.</i>
+		<br>
+		<i>This project is made by following the PHP official documentation at <a href="https://php.net" target="_blank" noreferer>php.net</a>.</i>
 	</div>
 
+	<h1>echo</h1>
 	<?php echo '<p>Hello PHP</p>'; ?>
-	<?php echo '<h1>I will become a Ninja in Back End</h1>'; ?>
-	<br><br>
+	<h1>echo with variable ($_SERVER)</h1>
 	<?php echo '<p>Your browser info: ' . $_SERVER['HTTP_USER_AGENT']; ?>
 
-	<br><br><br>
-
+	<!-- In out of PHP  -->
+	<h1>Rendering HTML out of PHP tags but following PHP logic</h1>
 	<p>The little magic bellow is done jumping in and out of PHP mode even in the middle of a PHP block:</p>
 	<?php
 	if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') === false) {
@@ -31,30 +34,13 @@
 	<?php } else { ?>
 		<p>Bro, you're using Internet Explorer... why???</p>
 	<?php } ?>
-
-	<br>
-
-	<a href="./1.0.dealWForms.php">Let's deal with forms</a>
+	<b>For outputting large blocks of text, dropping out of PHP parsing mode is generally more efficient than sending all of the text through echo or print.
+	</b>
 
 	<br><br><br>
-
-	<?= 'This is a little string printed with a short echo tag. <br>
-	BTW, the short ego tag does not work in XHTML or XML.' ?>
-
-	<? echo 'will this work?' ?>
-
-	<p>If a file is composed of PHP <i>only</i>, it is recommended that the closing php tag be avoided.</p>
-
-	<br>
-
-	<p>This is outputed by a conditional statement, jumping again in and out of PHP, but this time with different syntax in the code:</p>
-	<?php if (true) : ?>
-		Result of the condition is true. This time we're using 'if(...): ... else: ... endif; Instead of using 'if(...) {...} else {...}'
-	<?php else : ?>
-		Nope, false.
-	<?php endif; ?>
-	<p>For outputting large blocks of text, dropping out of PHP parsing mode is generally more efficient than sending all of the text through echo or print.
-	</p>
+	-----
+	<h5>Sub-Section: <a href="./1.0.dealWForms.php">Dealing with forms</a></h5>
+	<h4>Next section: <a href="./2.basicSyntax.php">Basic Syntax</a></h4>
 </body>
 
 </html>
