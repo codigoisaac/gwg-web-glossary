@@ -10,7 +10,7 @@
 <body>
 	<p>Any form element will automatically be available to your PHP scripts.</p>
 
-	<form action="1.1.formAction.php" method="post">
+	<form action="1.1.1.formAction.php" method="post">
 		<p>Your name: <input type="text" name="name" /></p>
 		<p>Your age: <input type="text" name="age" /></p>
 		<p><input type="submit" /></p>
