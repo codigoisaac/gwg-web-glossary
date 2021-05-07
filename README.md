@@ -1,2 +1,2 @@
 # masterphp
- Coding through the PHP documentation to learn this awesome programming language.
+ A simple project with noob code to learn the PHP programming language.
