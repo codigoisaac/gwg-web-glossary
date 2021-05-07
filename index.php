@@ -19,7 +19,7 @@
 	<!-- Menu  -->
 	<h3>Section 1: <a href="./1.GettingStarted/1.0.gettingStarted.php">Getting Started</a></h3>
 
-	<h3>Section 2: <a href="./2.LanguageReference/2.0.languageReference.php">Language Reference</a></h3>
+	<h3>Section 2: <a href="./2.LanguageReference/languageReference.php">Language Reference</a></h3>
 </body>
 
 </html>

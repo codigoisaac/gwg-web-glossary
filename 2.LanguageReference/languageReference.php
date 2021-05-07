@@ -14,8 +14,8 @@
 
 <body>
 	<h1>Language Reference</h1>
-	<a href="./2.1.basicSyntax.php">2.1. Basic Syntax</a>
-	<a href="./2.2.types.php">2.2. Types</a>
+	<a href="./2.1.basicSyntax/2.1.basicSyntax.php">2.1. Basic Syntax</a>
+	<a href="./2.2.types/2.2.types.php">2.2. Types</a>
 </body>
 
 </html>
