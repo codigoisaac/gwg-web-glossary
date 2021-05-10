@@ -2,7 +2,8 @@
 $title = 'include';
 
 include('./../inc/header.php');
-require('./../inc/functions.php'); // show error if not found
+// require('./../inc/functions.php'); // show error if not found
+require_once('./../inc/functions.php');
 
 $alchemies = [
 	['name' => 'Fruitarianism', 'power' => 'Energy'],
