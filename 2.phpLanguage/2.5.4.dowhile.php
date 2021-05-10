@@ -19,17 +19,14 @@ $alchemies = [
 
 	<h2>My Alchemy Practices</h2>
 
-	<!-- with traditional array  -->
-	<table>
-		<?php
+	<?php
+	$i = 0;
+	do {
+		echo $alchemies[$i];
+		$i++;
+	} while ($i < count($alchemies));
+	?>
 
-		$i = 0;
-		do {
-			echo $alchemies[$i];
-			$i++;
-		} while ($i < count($alchemies));
-		?>
-	</table>
 
 </body>
 

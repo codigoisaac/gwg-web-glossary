@@ -19,18 +19,15 @@ $alchemies = [
 
 	<h2>My Alchemy Practices</h2>
 
-	<!-- with traditional array  -->
-	<table>
-		<?php
-		for ($i = 0; $i < 10; $i++) {
-			echo $i;
-		}
+	<?php
+	for ($i = 0; $i < 10; $i++) {
+		echo $i;
+	}
 
-		for ($i = 0; $i < count($alchemies); $i++) {
-			echo $alchemies[$i];
-		}
-		?>
-	</table>
+	for ($i = 0; $i < count($alchemies); $i++) {
+		echo $alchemies[$i];
+	}
+	?>
 
 </body>
 
