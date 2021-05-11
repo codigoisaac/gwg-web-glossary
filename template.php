@@ -1,11 +1,7 @@
 <?php
-// if (!isset($title)) {
-//     $title = '';
-// }
 
-require_once('functions.php');
+
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,3 +21,17 @@ require_once('functions.php');
 			<a class="navbar-brand" href="#">PHP Fundamentals: <?= $title; ?></a>
 		</div>
 	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h1 class="mt-5"></h1>
+			</div>
+		</div>
+		<div class="row">
+			<!-- Content here -->
+		</div>
+	</div>
+</body>
+
+</html>
