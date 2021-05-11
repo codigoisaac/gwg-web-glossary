@@ -6,6 +6,8 @@ include('./../inc/header.php');
 //
 // $category = $_GET['category'];
 // $limit = $_GET['limit'];
+
+// get information from the URL
 $category = filter_input(INPUT_GET, 'category', FILTER_VALIDATE_INT);
 $limit = filter_input(INPUT_GET, 'limit', FILTER_VALIDATE_INT);
 
