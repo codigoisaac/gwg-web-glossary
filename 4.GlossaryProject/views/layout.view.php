@@ -5,7 +5,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title><?= $view_bag['title']; ?></title>
+	<title>
+		<?php
+		if (isset($view_bag['title'])) {
+			echo $view_bag['title'];
+		} else {
+			echo '404';
+		}
+		?>
+	</title>
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="../assets/css/php-fundamentals.css" rel="stylesheet" />
 </head>
@@ -14,7 +22,15 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">PHP Fundamentals: <?= $view_bag['title']; ?></a>
+			<a class="navbar-brand" href="#">PHP Fundamentals:
+				<?php
+				if (isset($view_bag['title'])) {
+					echo $view_bag['title'];
+				} else {
+					echo '404';
+				}
+				?>
+			</a>
 		</div>
 	</nav>
 

@@ -23,3 +23,15 @@ function get_terms() {
 	$json = get_data();
 	return json_decode($json);
 }
+
+function get_term($term) {
+	$terms = get_terms();
+
+	foreach ($terms as $item) {
+		if ($item->term == $term) {
+			return $item;
+		}
+	}
+
+	return false;
+}
