@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title><?= $viewBag['title']; ?></title>
+	<title><?= $view_bag['title']; ?></title>
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="../assets/css/php-fundamentals.css" rel="stylesheet" />
 </head>
@@ -14,7 +14,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">PHP Fundamentals: <?= $viewBag['title']; ?></a>
+			<a class="navbar-brand" href="#">PHP Fundamentals: <?= $view_bag['title']; ?></a>
 		</div>
 	</nav>
 

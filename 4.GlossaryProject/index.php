@@ -1,10 +1,10 @@
 <?php
 
-$title = 'Hello, MVC!';
+require('app/app.php');
 
-require('functions.php');
+$data = get_data();
 
-$viewBag = [];
-$viewBag['title'] = 'This is the Title';
+$view_bag = [];
+$view_bag['title'] = 'This is the Title';
 
-view('index', $title);
+view('index', $data);
