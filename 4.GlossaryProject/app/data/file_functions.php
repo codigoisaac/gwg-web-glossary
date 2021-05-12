@@ -35,3 +35,18 @@ function get_term($term) {
 
 	return false;
 }
+
+function search_terms($search) {
+	$items = get_terms();
+
+	$results = array_filter($items, function ($item) use ($search) {
+		if (
+			strpos($item->term, $search) !== false ||
+			strpos($item->definition, $search) !== false
+		) {
+			return $item;
+		}
+	});
+
+	return $results;
+}

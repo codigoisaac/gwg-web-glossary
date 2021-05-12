@@ -5,6 +5,14 @@
 		</div>
 	</div>
 	<div class="row">
+		<form action="" class="form-inline" method="GET">
+			<div class="form-group">
+				<input type="text" name="search" id="search">
+				<input type="submit" value="Search">
+			</div>
+		</form>
+	</div>
+	<div class="row">
 		<table class="table table-striped">
 			<?php foreach ($model as $item) : ?>
 				<tr>
