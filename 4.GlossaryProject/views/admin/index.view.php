@@ -19,6 +19,7 @@
 					<td><a href="detail.php?term=<?= $item->term ?>">
 							<?= $item->term ?></a></td>
 					<td><?= $item->definition ?></td>
+					<td><a href="edit.php?key=<?= $item->term ?>">Edit</a></td>
 				</tr>
 			<?php endforeach; ?>
 		</table>

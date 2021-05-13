@@ -65,3 +65,17 @@ function add_term($term, $definition) {
 function set_data($arr) {
 	file_put_contents(CONFIG['data_file'], json_encode($arr));
 }
+
+function update_term($original_term, $new_term, $new_definition) {
+	$terms = get_terms();
+
+	foreach ($terms as $item) {
+		if ($item->term == $original_term) {
+			$item->term = $new_term;
+			$item->definition = $new_definition;
+			break;
+		}
+	}
+
+	set_data($terms);
+}
