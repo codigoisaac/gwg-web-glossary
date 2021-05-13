@@ -50,3 +50,18 @@ function search_terms($search) {
 
 	return $results;
 }
+
+function add_term($term, $definition) {
+	$terms = get_terms();
+
+	$terms[] = (object) [
+		'term' => $term,
+		'definition' => $definition,
+	];
+
+	set_data($terms);
+}
+
+function set_data($arr) {
+	file_put_contents(CONFIG['data_file'], json_encode($arr));
+}
