@@ -1,7 +1,7 @@
 <?php
 
 const CONFIG = [
-	'data_file' => 'data.json',
+	'data_file' => APP_ROOT . 'data.json', //todo: bug here
 	'users' => [
 		'admin@admin.com' => '1234',
 	],

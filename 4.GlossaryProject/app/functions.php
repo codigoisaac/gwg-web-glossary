@@ -2,7 +2,7 @@
 
 function view($name, $model = '') {
 	global $view_bag;
-	require("views/layout.view.php");
+	require(APP_ROOT . "views/layout.view.php");
 }
 
 function redirect($url) {
