@@ -6,13 +6,8 @@ function get_data() {
 	$json = '';
 
 	if (!file_exists($fname)) {
-		// $handle = fopen($fname, 'w+');
-		// fclose($handle);
 		file_put_contents($fname, '');
 	} else {
-		// $handle = fopen($fname, 'r');
-		// $json = fread($handle, filesize($fname));
-		// fclose($handle);
 		$json = file_get_contents($fname);
 	}
 
@@ -51,13 +46,12 @@ function search_terms($search) {
 	return $results;
 }
 
+require('glossaryterm.class.php');
+
 function add_term($term, $definition) {
 	$terms = get_terms();
 
-	$terms[] = (object) [
-		'term' => $term,
-		'definition' => $definition,
-	];
+	$terms[] = new GlossaryTerm($term, $definition);
 
 	set_data($terms);
 }
