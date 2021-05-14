@@ -12,7 +12,7 @@ if (is_post()) {
 	if (empty($term) || empty($definition)) {
 		//todo: display message
 	} else {
-		add_term($term, $definition);
+		Data::add_term($term, $definition);
 		redirect('index.php');
 	}
 }

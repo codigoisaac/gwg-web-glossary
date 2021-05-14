@@ -11,7 +11,7 @@ if (is_post()) {
 	if (empty($term)) {
 		//todo: display message
 	} else {
-		delete_term($term);
+		Data::delete_term($term);
 		redirect('index.php');
 	}
 }
@@ -25,7 +25,7 @@ if (is_get()) {
 		die();
 	}
 
-	$term = get_term($key);
+	$term = Data::get_term($key);
 
 	// check for sanitization later, for performance
 	if ($term === false) {

@@ -5,3 +5,6 @@ define('APP_ROOT', dirname(__FILE__) . '/../');
 require('config.php');
 require('functions.php');
 require('data/filedataprovider.class.php');
+require('data/data.class.php');
+
+Data::initialize(new FileDataProvider(CONFIG['data_file']));

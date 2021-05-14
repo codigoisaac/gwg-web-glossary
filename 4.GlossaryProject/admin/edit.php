@@ -13,7 +13,7 @@ if (is_post()) {
 	if (empty($term) || empty($definition) || empty($original_term)) {
 		//todo: display message
 	} else {
-		update_term($original_term, $term, $definition);
+		Data::update_term($original_term, $term, $definition);
 		redirect('index.php');
 	}
 }
@@ -27,7 +27,7 @@ if (is_get()) {
 		die();
 	}
 
-	$term = get_term($key);
+	$term = Data::get_term($key);
 
 	// check for sanitization later, for performance
 	if ($term === false) {

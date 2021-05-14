@@ -6,7 +6,7 @@ if (!isset($_GET['term'])) {
 	redirect('index.php');
 }
 
-$data = get_term($_GET['term']); //todo: validate this
+$data = Data::get_term($_GET['term']); //todo: validate this
 
 if (!$data) {
 	view('not_found');
