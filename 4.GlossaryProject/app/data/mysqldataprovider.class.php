@@ -6,6 +6,22 @@ class MySqlDataProvider extends DataProvider {
 	}
 
 	public function get_terms() {
+		// we're passing the result of this function as a model to the view
+
+		$db = $this->connect(); // create database connection
+
+		if ($db == null) { // check to see if we actually have a connection
+			return [];
+		}
+
+		$query = $db->query('SELECT * FROM terms');
+
+		$data = $query->fetchAll(PDO::FETCH_CLASS, 'GlossaryTerm');
+
+		$query = null;
+		$db = null;
+
+		return $data;
 	}
 
 	public function get_term($term) {
