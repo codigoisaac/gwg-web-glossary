@@ -95,7 +95,7 @@ class MySqlDataProvider extends DataProvider {
 		$db = $this->connect();
 
 		if ($db == null) {
-			return [];
+			return;
 		}
 
 		$sql = 'UPDATE terms SET term = :term, definition = :definition WHERE id = :id';
@@ -112,6 +112,21 @@ class MySqlDataProvider extends DataProvider {
 	}
 
 	public function delete_term($term) {
+		$db = $this->connect();
+
+		if ($db == null) {
+			return;
+		}
+
+		$sql = 'DELETE FROM terms WHERE id = :id';
+		$smt = $db->prepare($sql);
+
+		$smt->execute([
+			':id' => $term
+		]);
+
+		$smt = null;
+		$db = null;
 	}
 
 	private function connect() {
