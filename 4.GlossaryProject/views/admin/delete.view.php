@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<form action="" method="POST">
-			<input type="hidden" name="term" value="<?= $model->term ?>">
+			<input type="hidden" name="term" value="<?= $model->id ?>">
 			<div class="form-group">
 				<input class="btn btn-primary" type="submit" value="Delete this Term">
 			</div>
