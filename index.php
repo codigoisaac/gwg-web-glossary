@@ -1,17 +1,15 @@
-<html lang="en">
+<?php
 
-<head>
-	<title>Hello, PHP</title>
-</head>
+require('app/app.php');
 
-<body>
-	<h1>PHP is actually cool</h1>
+$view_bag = [
+	'title' => GWG,
+];
 
-	<?php
-	$name = 'Isaac';
-	echo "Hey PHP, $name likes you <3"; ?>
+if (isset($_GET['search'])) {
+	$items = Data::search_terms($_GET['search']);
+} else {
+	$items = Data::get_terms();
+}
 
-
-</body>
-
-</html>
+view('index', $items);
