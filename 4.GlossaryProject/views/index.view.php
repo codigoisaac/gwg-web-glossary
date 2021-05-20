@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h1 class="mt-5">Glossary</h1>
+			<h1 class="mt-5">GWG: Web Glossary</h1>
+			<small>by <a href="https://campsite.com/codigoisaac">códigoisaac</a></small>
 		</div>
 	</div>
 	<div class="row">

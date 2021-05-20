@@ -44,60 +44,28 @@ class MySqlDataProvider extends DataProvider {
 	}
 
 	public function add_term($term, $definition) {
-		$db = $this->connect();
-
-		if ($db == null) {
-			return;
-		}
-
-		$sql = 'INSERT INTO terms (term, definition) VALUES (:term, :definition)';
-		$smt = $db->prepare($sql); //statement obj
-
-		$smt->execute([
-			':term' => $term,
-			':definition' => $definition,
-		]);
-
-		$smt = null;
-		$db = null;
+		$this->execute(
+			'INSERT INTO terms (term, definition) VALUES (:term, :definition)',
+			[
+				':term' => $term,
+				':definition' => $definition,
+			]
+		);
 	}
 
 	public function update_term($original_term, $new_term, $new_definition) {
-		$db = $this->connect();
-
-		if ($db == null) {
-			return;
-		}
-
-		$sql = 'UPDATE terms SET term = :term, definition = :definition WHERE id = :id';
-		$smt = $db->prepare($sql);
-
-		$smt->execute([
-			':term' => $new_term,
-			':definition' => $new_definition,
-			':id' => $original_term
-		]);
-
-		$smt = null;
-		$db = null;
+		$this->execute(
+			'UPDATE terms SET term = :term, definition = :definition WHERE id = :id',
+			[
+				':term' => $new_term,
+				':definition' => $new_definition,
+				':id' => $original_term
+			]
+		);
 	}
 
 	public function delete_term($term) {
-		$db = $this->connect();
-
-		if ($db == null) {
-			return;
-		}
-
-		$sql = 'DELETE FROM terms WHERE id = :id';
-		$smt = $db->prepare($sql);
-
-		$smt->execute([
-			':id' => $term
-		]);
-
-		$smt = null;
-		$db = null;
+		$this->execute('DELETE FROM terms WHERE id = :id', [':id' => $term]);
 	}
 
 	private function connect() {
@@ -130,5 +98,20 @@ class MySqlDataProvider extends DataProvider {
 		$db = null;
 
 		return $data;
+	}
+
+	private function execute($sql, $sql_params) {
+		$db = $this->connect();
+
+		if ($db == null) {
+			return;
+		}
+
+		$smt = $db->prepare($sql);
+
+		$smt->execute($sql_params);
+
+		$smt = null;
+		$db = null;
 	}
 }
