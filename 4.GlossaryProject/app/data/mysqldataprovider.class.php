@@ -7,21 +7,7 @@ class MySqlDataProvider extends DataProvider {
 
 	public function get_terms() {
 		// we're passing the result of this function as a model to the view
-
-		$db = $this->connect(); // create database connection
-
-		if ($db == null) { // check to see if we actually have a connection
-			return [];
-		}
-
-		$query = $db->query('SELECT * FROM terms');
-
-		$data = $query->fetchAll(PDO::FETCH_CLASS, 'GlossaryTerm');
-
-		$query = null;
-		$db = null;
-
-		return $data;
+		return $this->query('SELECT * FROM terms');
 	}
 
 	public function get_term($term) {
@@ -51,25 +37,10 @@ class MySqlDataProvider extends DataProvider {
 	}
 
 	public function search_terms($search) {
-		$db = $this->connect();
-
-		if ($db == null) {
-			return [];
-		}
-
-		$sql = 'SELECT * FROM terms WHERE term LIKE :search OR definition LIKE :search';
-		$smt = $db->prepare($sql); //statement obj
-
-		$smt->execute([
-			':search' => '%' . $search . '%',
-		]);
-
-		$data = $smt->fetchAll(PDO::FETCH_CLASS, 'GlossaryTerm');
-
-		$smt = null;
-		$db = null;
-
-		return $data;
+		return $this->query(
+			'SELECT * FROM terms WHERE term LIKE :search OR definition LIKE :search',
+			[':search' => '%' . $search . '%']
+		);
 	}
 
 	public function add_term($term, $definition) {
@@ -135,5 +106,29 @@ class MySqlDataProvider extends DataProvider {
 		} catch (PDOException $e) {
 			return null;
 		}
+	}
+
+	private function query($sql, $sql_params = []) {
+		$db = $this->connect(); // create database connection
+
+		if ($db == null) { // check if we actually have a connection
+			return [];
+		}
+
+		$query = null;
+
+		if (empty($sql_params)) {
+			$query = $db->query($sql);
+		} else {
+			$query = $db->prepare($sql);
+			$query->execute($sql_params);
+		}
+
+		$data = $query->fetchAll(PDO::FETCH_CLASS, 'GlossaryTerm');
+
+		$query = null;
+		$db = null;
+
+		return $data;
 	}
 }
