@@ -22,7 +22,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">PHP Fundamentals:
+			<div class="navbar-brand" href="#">
 				<?php
 				if (isset($view_bag['title'])) {
 					echo $view_bag['title'];
@@ -30,7 +30,7 @@
 					echo '404';
 				}
 				?>
-			</a>
+			</div>
 		</div>
 	</nav>
 

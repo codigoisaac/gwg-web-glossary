@@ -35,5 +35,7 @@ if (is_get()) {
 		die();
 	}
 
+	$view_bag = ['title' => "editing $term->term - " . GWG];
+
 	view('admin/edit', $term);
 }

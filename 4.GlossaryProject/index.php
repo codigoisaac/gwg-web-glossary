@@ -3,7 +3,7 @@
 require('app/app.php');
 
 $view_bag = [
-	'title' => 'GWG: Web Glossary'
+	'title' => GWG,
 ];
 
 if (isset($_GET['search'])) {

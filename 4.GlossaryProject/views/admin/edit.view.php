@@ -20,9 +20,7 @@
 			</div>
 			<div class="form-group">
 				<label for="definition">Definition:</label>
-				<textarea class="form-control" name="definition" id="definition">
-				<?= $model->definition ?>
-				</textarea>
+				<textarea class="form-control" name="definition" id="definition"><?= $model->definition ?></textarea>
 			</div>
 			<div class="form-group">
 				<input class="btn btn-primary" type="submit" value="Update this Term">

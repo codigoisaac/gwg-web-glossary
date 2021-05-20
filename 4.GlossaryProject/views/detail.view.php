@@ -5,7 +5,4 @@
 			<h2><?= $model->definition ?></h2>
 		</div>
 	</div>
-	<div class="row">
-
-	</div>
 </div>

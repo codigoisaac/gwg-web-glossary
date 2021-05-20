@@ -14,7 +14,7 @@ if (!$data) {
 }
 
 $view_bag = [
-	'title' => "Glossary Project - $data->term details",
+	'title' => "$data->term - " . GWG,
 	'term' => $data->term,
 ];
 

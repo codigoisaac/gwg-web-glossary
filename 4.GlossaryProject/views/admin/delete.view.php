@@ -7,7 +7,7 @@
 
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h1 class="mt-5">Delete Term</h1>
+			<h1 class="mt-5">Delete <?= $model->term ?></h1>
 		</div>
 	</div>
 

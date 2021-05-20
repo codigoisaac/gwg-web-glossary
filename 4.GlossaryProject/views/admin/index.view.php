@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-lg-12 text-center">
 			<h1 class="mt-5">GWG: Web Glossary</h1>
-			<small>by <a href="https://campsite.com/codigoisaac">códigoisaac</a></small>
+			<?php require('../app/credits.template.html') ?>
 		</div>
 	</div>
 	<div class="row">

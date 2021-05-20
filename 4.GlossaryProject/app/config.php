@@ -9,3 +9,5 @@ const CONFIG = [
 		'admin@admin.com' => '1234',
 	],
 ];
+
+const GWG = 'GWG: Web Glossary';

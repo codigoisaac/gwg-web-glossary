@@ -20,7 +20,6 @@ function is_get() {
 
 function sanitize($value) {
 	$temp = filter_var(trim($value), FILTER_SANITIZE_STRING);
-
 	return $temp === false ? '' : $temp;
 }
 
