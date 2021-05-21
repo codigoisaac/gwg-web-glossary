@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-lg-12 text-center">
 			<h1 class="mt-5">GWG: Web Glossary</h1>
-			<?php require('app/credits.template.html') ?>
+			<?php require('assets/credits.template.html') ?>
 		</div>
 	</div>
 	<div class="row">

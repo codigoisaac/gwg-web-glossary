@@ -14,8 +14,8 @@
 		}
 		?>
 	</title>
-	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="../assets/css/php-fundamentals.css" rel="stylesheet" />
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/project.css" rel="stylesheet" />
 </head>
 
 <body>

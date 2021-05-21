@@ -1,13 +1,10 @@
-<head>
-	<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="../../assets/css/php-fundamentals.css" rel="stylesheet" />
-</head>
+<?php require('../assets/include-css-admin.html'); ?>
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
 			<h1 class="mt-5">GWG: Web Glossary</h1>
-			<?php require('../app/credits.template.html') ?>
+			<?php require('../assets/credits.template.html') ?>
 		</div>
 	</div>
 	<div class="row">
